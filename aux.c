@@ -23,13 +23,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 
 long square_root(long number) {
-    return (long) ceil(sqrt(number));
+    return (long) floor(sqrt(number));
 }
 
 int is_prime(long number) {
     if (number < 2) return 0;
     if (number == 2) return 1;
-    for (int i=2; i <= square_root(number); i++) {
+    for (int i=2; i <= sqrt(number); i++) {
         if (number % i == 0) {
             return 0;
         }
