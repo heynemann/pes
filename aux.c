@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include<math.h>
 
 // Copyright (C) 2011 by Bernardo Heynemann <heynemann@gmail.com>
@@ -74,4 +75,27 @@ int is_palindrome(int number) {
         }
     }
     return 1;
+}
+
+int atoi(const char *nptr) {
+    int n;
+
+    n = 0;
+    while (isspace(*nptr)) {
+        ++nptr;
+    }
+    if (*nptr != '-') {
+        if (*nptr == '+') {
+            ++nptr;
+        }
+        while (isdigit(*nptr)) {
+            n = 10 * n - '0' + *nptr++;
+        }
+    } else {
+        ++nptr;
+        while (isdigit(*nptr)) {
+            n = 10 * n + '0' - *nptr++;
+        }
+    }
+    return n;
 }
