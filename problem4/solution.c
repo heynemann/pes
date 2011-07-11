@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// project euler problem number 6 - http://projecteuler.net/index.php?section=problems&id=6
+// project euler problem number 4 - http://projecteuler.net/index.php?section=problems&id=4
 // All problem data is copyright of http://projecteuler.net
 
 // Copyright (C) 2011 by Bernardo Heynemann <heynemann@gmail.com>
