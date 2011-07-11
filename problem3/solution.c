@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
+#include "../aux.h"
 
 // project euler problem number 3 - http://projecteuler.net/index.php?section=problems&id=3
 // All problem data is copyright of http://projecteuler.net
@@ -24,8 +25,6 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 
-long square_root(long number);
-int is_prime(long number);
 long largest_prime_divisor(long number);
 
 int main() {
@@ -34,19 +33,6 @@ int main() {
     printf("The largest number is %ld", divisor);
     printf("\n\n");
     return 0;
-}
-
-long square_root(long number) {
-    return ceil(sqrt(number));
-}
-
-int is_prime(long number) {
-    for (int i=2; i < square_root(number); i++) {
-        if (number % i == 0) {
-            return 0;
-        }
-    }
-    return 1;
 }
 
 long largest_prime_divisor(long number) {
