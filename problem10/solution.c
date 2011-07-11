@@ -25,14 +25,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 
 int main() {
-    int sum=0;
-    for (int i=0; i < 2000000; i++) {
-        if (is_prime(i)) {
-            printf("prime found: %d. Adding up...\n", i);
-            sum += i;
+    long sum=0;
+    for (int number=2; number < 2000000; number++) {
+        if (is_prime(number)) {
+            printf("prime found: %d. Adding up...\n", number);
+            sum += number;
         }
     }
-    printf("The sum of all primes under 2,000,000 is %d", sum);
+    printf("The sum of all primes under 2,000,000 is %ld", sum);
     printf("\n\n");
     return 0;
 }
