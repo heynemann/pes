@@ -1,11 +1,3 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
-#include "../aux.h"
-
-// project euler problem number 7 - http://projecteuler.net/index.php?section=problems&id=7
-// All problem data is copyright of http://projecteuler.net
-
 // Copyright (C) 2011 by Bernardo Heynemann <heynemann@gmail.com>
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,19 +17,6 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 
-int main() {
-    int primes_found = 0;
-    int number = 0;
-    int last_prime = 0;
-    while(primes_found < 10001) {
-        if (is_prime(number)) {
-            last_prime = number;
-            primes_found++;
-        }
-        number++;
-    }
-    printf("The 10001st prime number is %d", last_prime);
-    printf("\n\n");
-    return 0;
-}
+long square_root(long number);
 
+int is_prime(long number);
