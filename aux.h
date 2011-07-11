@@ -18,5 +18,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 
 long square_root(long number);
-
 int is_prime(long number);
+char* itoa(int value, char* result, int base);
+int is_palindrome(int number);
