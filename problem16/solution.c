@@ -26,20 +26,6 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 
-long digit_sum(double number) {
-    char number_characters[1024];
-    sprintf(number_characters, "%.0f", number);
-
-    long acc = 0;
-    for (int i=0; i < strlen(number_characters); i++) {
-        char c = number_characters[i];
-        int num = c - '0';
-        acc += num;
-    }
-
-    return acc;
-}
-
 int main() {
     int result = 0;
     double number = pow(2, 1000);

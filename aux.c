@@ -99,3 +99,17 @@ int atoi(const char *nptr) {
     }
     return n;
 }
+
+long digit_sum(long double number) {
+    char number_characters[1024];
+    sprintf(number_characters, "%.0Lf", number);
+
+    long acc = 0;
+    for (int i=0; i < strlen(number_characters); i++) {
+        char c = number_characters[i];
+        int num = c - '0';
+        acc += num;
+    }
+
+    return acc;
+}
